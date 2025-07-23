@@ -11,7 +11,7 @@ class MANAGE_Object
 		static MANAGE_Object* object_instance;
 
 	public:
-		void ObjectInit();
+
 		MANAGE_Object(const MANAGE_Object& other) = delete;
 		void operator=(const MANAGE_Object&) = delete;
 

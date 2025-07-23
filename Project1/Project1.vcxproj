@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3473ab81-b7e2-4a51-8018-e00426d7778f}</ProjectGuid>
-    <RootNamespace>KAWAIEngine</RootNamespace>
+    <ProjectGuid>{5236465e-4fd7-42f9-b271-b8d3f5c57604}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>kawai_engine_main(lib)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -102,17 +103,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\3rd_party\SDL2-2.32.8\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib,SDL2main.lib,SDL2test.lib</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories> $(SolutionDir)\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -123,55 +124,19 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\3rd_party\SDL2-2.32.8\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib,SDL2main.lib,SDL2test.lib</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories> $(SolutionDir)\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="KAWAI_Engine.cpp" />
-    <ClCompile Include="MANAGE_Input.cpp" />
-    <ClCompile Include="MANAGE_Object.cpp" />
-    <ClCompile Include="MANAGE_Render.cpp" />
-    <ClCompile Include="MANAGE_Resource.cpp" />
-    <ClCompile Include="MANAGE_State.cpp" />
-    <ClCompile Include="MANAGE_Window.cpp" />
-    <ClCompile Include="private\KAWAI_Engine.cpp" />
-    <ClCompile Include="private\MANAGE_Input.cpp" />
-    <ClCompile Include="private\MANAGE_Object.cpp" />
-    <ClCompile Include="private\MANAGE_Render.cpp" />
-    <ClCompile Include="private\MANAGE_Resource.cpp" />
-    <ClCompile Include="private\MANAGE_State.cpp" />
-    <ClCompile Include="private\MANAGE_Window.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Engine.hpp" />
-    <ClInclude Include="KAWAI_Engine.h" />
-    <ClInclude Include="MANAGE_Core.h" />
-    <ClInclude Include="MANAGE_Input.h" />
-    <ClInclude Include="MANAGE_Object.h" />
-    <ClInclude Include="MANAGE_Render.h" />
-    <ClInclude Include="MANAGE_Resource.h" />
-    <ClInclude Include="MANAGE_State.h" />
-    <ClInclude Include="MANAGE_Window.h" />
-    <ClInclude Include="private\KAWAI_Engine.h" />
-    <ClInclude Include="private\MANAGE_Core.h" />
-    <ClInclude Include="private\MANAGE_Input.h" />
-    <ClInclude Include="private\MANAGE_Object.h" />
-    <ClInclude Include="private\MANAGE_Render.h" />
-    <ClInclude Include="private\MANAGE_Resource.h" />
-    <ClInclude Include="private\MANAGE_State.h" />
-    <ClInclude Include="private\MANAGE_Window.h" />
-    <ClInclude Include="public\KWEngine.hpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
