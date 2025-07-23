@@ -1,4 +1,8 @@
 #pragma once
+<<<<<<< Updated upstream:Project1/MANAGE_Window.h
+=======
+#include <iostream>
+>>>>>>> Stashed changes:Project/KAWAI_Engine/MANAGE_Window.h
 
 class KAWAI_Engine;
 

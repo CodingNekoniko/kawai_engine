@@ -103,11 +103,20 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+<<<<<<< Updated upstream:Project1/Project1.vcxproj
       <AdditionalIncludeDirectories>$(SolutionDir)\3rd_party\SDL2-2.32.8\include</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>$(SolutionDir)KAWAI_Engine</AdditionalIncludeDirectories>
+>>>>>>> Stashed changes:Project/Project1/Project1.vcxproj
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+<<<<<<< Updated upstream:Project1/Project1.vcxproj
+=======
+      <AdditionalLibraryDirectories>$(SolutionDir)\KAWAI_Engine\x64\$(Configuration);$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+>>>>>>> Stashed changes:Project/Project1/Project1.vcxproj
     </Link>
     <Lib>
       <AdditionalDependencies>SDL2.lib,SDL2main.lib,SDL2test.lib</AdditionalDependencies>
@@ -124,11 +133,20 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+<<<<<<< Updated upstream:Project1/Project1.vcxproj
       <AdditionalIncludeDirectories>$(SolutionDir)\3rd_party\SDL2-2.32.8\include</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>$(SolutionDir)KAWAI_Engine</AdditionalIncludeDirectories>
+>>>>>>> Stashed changes:Project/Project1/Project1.vcxproj
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+<<<<<<< Updated upstream:Project1/Project1.vcxproj
+=======
+      <AdditionalLibraryDirectories>$(SolutionDir)\KAWAI_Engine\x64\$(Configuration);$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+>>>>>>> Stashed changes:Project/Project1/Project1.vcxproj
     </Link>
     <Lib>
       <AdditionalDependencies>SDL2.lib,SDL2main.lib,SDL2test.lib</AdditionalDependencies>

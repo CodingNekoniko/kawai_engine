@@ -132,10 +132,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< Updated upstream:kawai_engine/kawai_engine.vcxproj
     <ClCompile Include="mainexe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainexe.hpp" />
+=======
+    <ClCompile Include="KAWAI_Engine.cpp" />
+    <ClCompile Include="MANAGE_Input.cpp" />
+    <ClCompile Include="MANAGE_Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine.hpp" />
+    <ClInclude Include="KAWAI_Engine.h" />
+    <ClInclude Include="MANAGE_Core.h" />
+    <ClInclude Include="MANAGE_Input.h" />
+    <ClInclude Include="MANAGE_Window.h" />
+>>>>>>> Stashed changes:Project/KAWAI_Engine/KAWAI_Engine.vcxproj
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
