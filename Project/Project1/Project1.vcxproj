@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b66bd60a-3095-43bf-a860-748f711de703}</ProjectGuid>
-    <RootNamespace>kawaiengine</RootNamespace>
+    <ProjectGuid>{cb1105c9-0cba-4032-a607-cdfcf759751e}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>kawai_engine_test(exe)</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -103,15 +102,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories> $(SolutionDir)\3rd_party\SDL2-2.32.8\include
-</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\KAWAI_Engine\Engine.hpp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL2.lib; SDL2main.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\KAWAI_Engine\x64\$(Configuration);$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64\SDL2.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -121,21 +122,20 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories> $(SolutionDir)\3rd_party\SDL2-2.32.8\include
-</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\KAWAI_Engine\Engine.hpp</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Windows</SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL2.lib; SDL2main.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\KAWAI_Engine\x64\$(Configuration);$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)\KAWAI_Engine\3rd_party\SDL2-2.32.8\lib\x64\SDL2.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="mainexe.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="mainexe.hpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
